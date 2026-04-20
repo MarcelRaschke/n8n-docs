@@ -41,10 +41,10 @@ Search for workflows with optional filters. Returns a preview of each workflow.
 | `count` | `integer` | Total number of workflows that match the filters |
 
 #### Notes
-
+- Column type is immutable (through MCP) after creation.
 - Maximum result limit is 200.
 - Includes user permission scopes for each workflow so MCP clients can get more info about what they can do with the workflow.
-- **IMPORTANT**: This tool is able to list all workflows a user has access to, regardless of their `Available in MCP` setting
+- **IMPORTANT**: This tool is able to list all workflows a user has access to, regardless of their `Available in MCP` setting.
 
 ---
 
@@ -195,8 +195,8 @@ Test a workflow using pin data to bypass external services. Trigger nodes, nodes
 
 #### Notes
 
-- Can be used to test workflow logic without setting up credentials or hitting external services
-- This tool executes workflows synchronously (waits for execution to finish)
+- Can be used to test workflow logic without setting up credentials or hitting external services.
+- This tool executes workflows synchronously (waits for execution to finish).
 - Has an enforced MCP execution timeout (5 minutes).
 
 ---
@@ -312,7 +312,7 @@ Search for projects accessible to the current user.
 #### Notes
 
 - Maximum result limit is 100.
-- This tool enables MCP clients to create workflows and data tables in a specific project
+- This tool enables MCP clients to create workflows and data tables in a specific project.
 
 ---
 
@@ -344,7 +344,7 @@ Search for folders within a project.
 #### Notes
 
 - Maximum result limit is 100.
-- This tool enables MCP clients to create workflows in a specific folder
+- This tool enables MCP clients to create workflows in a specific folder.
 
 ---
 
@@ -429,7 +429,7 @@ Get TypeScript type definitions for n8n nodes. Returns exact parameter names and
 
 #### Notes
 
-- Critical for correct node configuration -- MCP clients should always call before writing workflow code.
+- Critical for correct node configuration - MCP clients should always call before writing workflow code.
 - Supports both simple string node IDs and objects with discriminators for multi-variant nodes.
 
 ---
@@ -525,6 +525,7 @@ Create a workflow in n8n from validated SDK code. Parses the code into a workflo
 - Marks the workflow with `aiBuilderAssisted` metadata.
 - Resolves webhook node IDs automatically.
 - `folderId` requires `projectId` to also be provided.
+- MCP clients should generate short descriptions for all new workflows.
 
 ---
 
@@ -561,6 +562,7 @@ Update an existing workflow in n8n from validated SDK code. Parses the code into
 
 - Preserves user-configured credentials from the existing workflow by matching nodes by name and type.
 - Marks the workflow with `aiBuilderAssisted` metadata.
+- MCP clients should (re)generate short descriptions for all modified workflows.
 
 ---
 
@@ -587,7 +589,7 @@ Archive a workflow in n8n by its ID.
 
 #### Notes
 
-- Idempotent -- skips already-archived workflows.
+- Idempotent - skips already-archived workflows.
 
 ---
 

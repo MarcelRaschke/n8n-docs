@@ -67,6 +67,15 @@ For full release details, refer to [Releases](https://github.com/n8n-io/n8n/rele
 
 
 
+## n8n@2.19.4
+
+View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.19.3...n8n@2.19.4) for this version.<br />
+**Release date:** 2026-05-06
+
+This release contains bug fixes.
+
+
+
 ## n8n@2.19.3
 
 View the [commits](https://github.com/n8n-io/n8n/compare/n8n@2.19.2...n8n@2.19.3) for this version.<br />
